@@ -3,8 +3,14 @@ webp-test
 
 ## Basics
 
-[WebP](https://developers.google.com/speed/webp/) is an image format that employs both lossy and lossless compression.
 Webp-test is a javascript tool to check whether the browser support webp.
+
+## Why Webp Test?
+
+[WebP](https://developers.google.com/speed/webp/) is an image format that employs both lossy and lossless compression.
+The degree of compression is adjustable so a user can choose the trade-off between file size and image quality. WebP typically achieves an average of 39% more compression than JPEG and JPEG 2000, without loss of image quality.
+But few browsers that support WebP right now (as of April 2010, Google Chrome 9+ and Opera 11.10 beta), how we use it?
+Now you can use webptest to test browser whether it supports.
 
 ## Usage
 
@@ -19,3 +25,5 @@ XWebp.test( function(){
 ```
 
 It checks asynchronously when you first call the function. The callbacks will be fired immediately when having the result.
+
+For More Information or Examples , please visit [http://i.chillrain.com/index.php/webp-test/](http://i.chillrain.com/index.php/webp-test/ )
