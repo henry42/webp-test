@@ -3,7 +3,7 @@ webp-test
 
 ## Basics
 
-WebP is an image format that employs both lossy[7] and lossless compression.
+[WebP](https://developers.google.com/speed/webp/) is an image format that employs both lossy and lossless compression.
 Webp-test is a javascript tool to check whether the browser support webp.
 
 ## Usage
