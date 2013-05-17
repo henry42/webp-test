@@ -9,6 +9,8 @@
         Webp.support = support;
     }
 
+    Webp.ver = '1.0';
+
     Webp.test = function( supportCallback , unsupportCallback ){
 
         var validSupportCallback = typeof supportCallback === 'function',
@@ -30,6 +32,10 @@
 
         }
     };
+
+    if ( typeof define === "function" ) {
+        define( "xwebp", [], function () { return Webp; } );
+    }
 
     global.XWebp = Webp;
 
