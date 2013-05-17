@@ -10,13 +10,17 @@
     }
 
     Webp.test = function( supportCallback , unsupportCallback ){
+
+        var validSupportCallback = typeof supportCallback === 'function',
+            validUnsupportCallback = typeof unsupportCallback === 'function';
+
         if( support === true )
-            supportCallback.call( global );
+            validSupportCallback && supportCallback.call( global );
         else if( support === false )
-            unsupportCallback.call( global );
+            validUnsupportCallback && unsupportCallback.call( global );
         else{
-            supportCallbacks.push( supportCallback );
-            unsupportCallbacks.push( unsupportCallback );
+            validSupportCallback && supportCallbacks.push( supportCallback );
+            validUnsupportCallback && unsupportCallbacks.push( unsupportCallback );
             if( !image ){
                 image = new Image;
                 image.onerror = function(){ support = false; done(); };
